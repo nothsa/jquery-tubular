@@ -28,7 +28,8 @@
         volumeUpClass: 'tubular-volume-up',
         volumeDownClass: 'tubular-volume-down',
         increaseVolumeBy: 10,
-        start: 0
+        start: 0,
+        ivLoadPolicy: 3 
     };
 
     // methods
@@ -54,6 +55,7 @@
                 height: Math.ceil(options.width / options.ratio),
                 videoId: options.videoId,
                 playerVars: {
+                    iv_load_policy: options.ivLoadPolicy,
                     controls: 0,
                     showinfo: 0,
                     modestbranding: 1,
